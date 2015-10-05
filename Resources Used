@@ -1,0 +1,108 @@
+Resources
+Functions & Header Files used in this project
+#include<graphics.h>
+C graphics using graphics.h functions or WinBGIM (Windows 7) can be used to draw different shapes, display text in different fonts, change colors and many more. Using functions of graphics.h in turbo c compiler you can make graphics programs, animations, projects and games. You can draw circles, lines, rectangles, bars and many other geometrical figures.
+ 
+Initgraph function
+ It is used to initialize with the graphics library and changes to the graphics screen for drawing. It is the first step you need to do during graphics programming. 
+ 
+Delay function It is used to suspend execution of a program for a particular time.
+Here unsigned int is the number of milliseconds (1 second = 1000 milliseconds ). To use delay function in the source code it should include the dos.h header file.
+ 
+ Setcolor(int color);
+Total 16 colors are available. Strictly speaking number of available colors depends on current graphics mode and driver.For Example: - BLACK is assigned 0, RED is assigned 4 etc. setcolor function is used to change the current drawing color.e.g. setcolor(RED) or setcolor(4) changes the current drawing color to RED. Remember that default drawing color is WHITE.
+ 
+Outtextxy
+outtextxy function display text or string at a specified point(x,y) on the screen.
+Declaration: - outtextxy(int x, int y, char *string);
+x, y are coordinates of the point and third argument contains the address of string to be displayed.
+ 
+Setfillstyle
+setfillstyle function sets the current fill pattern and fill color.
+Declaration :-  setfillstyle( int pattern, int color);
+ 
+Fillpoly
+Fillpoly function draws and fills a polygon. It require same arguments as drawpoly.
+Declaration :- drawpoly( int num, int *polypoints );
+fillpoly fills using current fill pattern and color which can be changed usingsetfillstyle.
+
+Fill Ellipse
+fillellipse takes only 4 parameters center point and xradius and yradius and is capable of filling with any color and / or style set by setfillstyle function.
+
+Functions & Classes in Source Code
+
+Class high
+
+This class is used to allocate memory in the program for high score. It contains 
+
+members of integer and character array to hold the high score and their name 
+
+respectively.
+
+Int main()
+
+This function contains the main source code. It returns 0 to end the entire program. 
+
+Program (Game) is executed by compiler from this function. This function also contains 
+
+conditions upon which the plane (aircraft) moves forward or backward in a given time.
+
+In this function we have introduced other inbuilt function in order for the game to work in 
+
+coherence with the user.  
+
+Some of the built in function used are:
+
+ initgraph(&gd, &gm, “C:\\XYZ”)
+
+This inbuilt function under #include<graphics.h> creates a virtual screen to create 
+
+images such as lines, ellipse, circle etc. The parameters in this function refer to the 
+
+usage of maximum graphics by the compiler of the system.
+
+ outtextxy(x,y,””)
+
+This inbuilt function enables output statements in a graph screen. This statement is 
+
+a replacement for ‘cout’ statements in our program to output data on a screen along 
+
+with graphical content. The parameters refer to the x and y coordinated on the 
+
+graphical screen, while the last parameter is the content to be displayed.
+
+ setcolor(4)
+
+The function sets the color of the screen. Numbers are used instead of color names 
+
+where the numbers represent a different color. In this case the color set to blue.
+
+ settextstyle(7,0,5)
+
+The functions sets the size, style (styles such as the ones used in word are 
+
+represented through numbers). This permanently sets the style and size for the rest 
+
+of the outtextxy statements.
+
+ delay(100)
+
+This function is with respect to time. The function uses inbuilt time system to track 
+
+the amount of time past. The following functions is executed after (100s in this case) 
+
+x amount of time.
+
+ itoa(x, y, 10) converts an integer to a character type of the given with respect to the 
+
+integer’s base. In this case the base is given as 10.
+
+ int fillpoly (5,x)
+
+This fills the polygon of x (area) with black as color number 5 refers to black.
+
+ int fillellipse (x,y,8,8)
+
+Similar to the above function this fills the polygon given by the areas of x, y and size 
+
+of 8. The set color before this enables the developer to fill in color to the ellipse.
