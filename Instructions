@@ -1,0 +1,25 @@
+To start the game, ‘D’ has to be pressed at least twenty times to take off the aircraft.. 
+
+ Pressing any other key will indicate a warning by giving a black flash.
+
+ The controls for navigation are:
+
+W - to move up
+
+A - to move left    
+
+S - to move down    
+
+D - to move right
+
+ To exit anytime the escape key has to be pressed twice. 
+
+ Navigation of F16 within the view area is desired as outside the view area, it will 
+
+be difficult to track the aircraft.
+
+ To win the game the player must score more than 100 points.
+
+ If the player runs out of fuel the game ends.
+
+ High Scores are recorded at the end of the game and are displayed by pressing ‘H’ on the Game Menu.
